@@ -1,0 +1,25 @@
+{% extends "trivia/base.html" %}
+
+{% block content %}
+    
+    <div class="teams">
+        <div class="team redteam">
+            <h2>Red Team</h2>
+            <h2 class="red-points">{{red}}</h2>
+        </div>                                            
+        <div class="team blueteam">
+            <h2>Blue Team</h2>
+            <h2 class="blue-points">{{blue}}</h2>
+        </div>
+        <div class="prompt">
+            <!-- <h1 class="question">What produces milk and eats grass?</h1> -->
+            <h1 class="question">{{ question }}</h1>
+            <form action="" id="rvb-form">
+                <input type="text" class="guess" placeholder="Answer...">
+                <input type="submit">
+            </form>
+            {{ answer }}
+        </div>
+    </div>
+
+{% endblock %}
