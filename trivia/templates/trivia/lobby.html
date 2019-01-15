@@ -1,0 +1,49 @@
+{% extends "trivia/base.html" %}
+
+{% block content %}
+
+    <div class="dead-center">
+        <div class="section">
+            <div class="row pane">
+                <div class="pane-left">
+                    <div class="pane-title">
+                        Users
+                    </div>
+                    <div class="user-list">
+                        <li>Jeff</li>
+                        <li>Bakr</li>
+                        <li>Dunday</li>
+                        <li>Sincera</li>
+                        <li>Florent</li>
+                        <li>Milk</li>
+                    </div>
+                </div>
+                <div class="pane-right">
+                    <div class="messagebox">
+                        <input type="text">
+                        <button>Send</button>
+                    </div>
+                    <div class="chatbox">
+                        <div class="message">
+                            <span class="username">Name</span>
+                            <span class="comment">Comment goes here just like this...</span>
+                        </div>
+                        <div class="message">
+                            <span class="username">Name1</span>
+                            <span class="comment">Hi everyone!</span>
+                        </div>
+                        <div class="message">
+                            <span class="username">Name2</span>
+                            <span class="comment">Welcome newbie!</span>
+                        </div>
+                        <div class="message">
+                            <span class="username">Name3</span>
+                            <span class="comment">Guys lets start the game... :/</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

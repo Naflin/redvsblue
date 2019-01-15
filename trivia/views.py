@@ -33,3 +33,7 @@ def home(request):
         'red': 0,
         'blue': 0,
     })
+
+def lobby(request):
+
+    return render(request, 'trivia/lobby.html')

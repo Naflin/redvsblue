@@ -23,6 +23,25 @@ RED VS BLUE
 */
 
 
+.primary-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 #content {
     /* display: flex;
@@ -37,20 +56,61 @@ RED VS BLUE
     width: 100%;
 } */
 
+.dead-center {
+    display: flex;
+    justify-content: center;
+}
+
 .section {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+}
+
+.pane {
+    display: flex;
+    justify-content: flex-start;
+    border: solid 2px #ffffff;
+    height: 500px;
+}
+
+.pane-left {
+    flex: 1;
+    border-right: solid 2px #ffffff;
+    padding: 5px;
+}
+
+.pane-right {
+    flex: 3;
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 5px;
+}
+
+.chatbox {
+    
+}
+
+.section-main {
     display: flex;
     justify-content: center;
 }
 
 .sign-content {
     margin-top: 25px;
-    width: 700px;
+    width: 800px;
     padding: 15px;
     background: #aa7d35;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: black;
+    border-radius: 6px;
 }
 
 .sign-content:before{
@@ -77,16 +137,24 @@ RED VS BLUE
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 400px;
+    width: 500px;
     height: 600px;
 }
 
 .redteam {
-    background: #9C2624;
+    /* background: #9C2624; */
+    background: rgb(144,45,43);
+    background: radial-gradient(circle, rgba(144,45,43,1) 0%, rgba(156,38,36,1) 100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .blueteam {
-    background: #13399E;
+    /* background: #13399E; */
+    background: rgb(14,50,145);
+    background: radial-gradient(circle, rgba(14,50,145,1) 0%, rgba(19,57,158,1) 100%);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .banner {
