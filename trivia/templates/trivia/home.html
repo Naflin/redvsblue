@@ -1,24 +1,42 @@
 {% extends "trivia/base.html" %}
 
 {% block content %}
-    
-    <div class="teams">
-        <div class="team redteam">
-            <h2>Red Team</h2>
-            <h2 class="red-points">{{red}}</h2>
-        </div>                                            
-        <div class="team blueteam">
-            <h2>Blue Team</h2>
-            <h2 class="blue-points">{{blue}}</h2>
+    <div class="wrapper">
+        <div class="teams">
+            <div class="team redteam">
+                <div class="stats stats-blue">
+                    <h2 class="banner redteam">Red Team</h2>
+                    <h2 class="points points-red">{{red}}</h2>
+                </div>
+                <div class="join">
+                    <button id="join-red">Join</button>
+                </div>
+                <div class="banner-trail banner-trail-red"></div>
+            </div>                               
+            <!-- <div class="team">
+                vs
+            </div>              -->
+            <div class="team blueteam">
+                <div class="stats stats-blue">
+                    <h2 class="banner blueteam">Blue Team</h2>
+                    <h2 class="points points-blue">{{blue}}</h2>                
+                </div>
+                <div class="join">
+                    <button id="join-blue">Join</button>
+                </div>
+                <div class="banner-trail banner-trail-blue"></div>
+            </div>
+            <!-- <div class="prompt">
+                <h1 class="question">{{ question }}</h1>
+                <form id="rvb-form" action="" method="GET">
+                    {{ form.as_p }}
+                    <input type="submit">
+                </form>
+                {{ answer }}
+            </div> -->
         </div>
-        <div class="prompt">
-            <!-- <h1 class="question">What produces milk and eats grass?</h1> -->
-            <h1 class="question">{{ question }}</h1>
-            <form action="" id="rvb-form">
-                <input type="text" class="guess" placeholder="Answer...">
-                <input type="submit">
-            </form>
-            {{ answer }}
+        <div class="road-wrapper">
+            <div class="road"></div>
         </div>
     </div>
 

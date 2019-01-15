@@ -1,11 +1,16 @@
 * { 
     margin: 0;
-    padding: 0; 
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     color: #ffffff;
-    font-family: sans-serif;
+    /* font-family: sans-serif; */
+    font-family: 'Graduate', cursive;
+    background: #e0bb74;
+    /* background: rgb(247,219,163); */
+    background: radial-gradient(circle, rgba(247,219,163,1) 0%, rgba(224,187,116,1) 100%);
 }
 
 /*
@@ -17,7 +22,163 @@ RED VS BLUE
 
 */
 
+#content {
+    /* display: flex;
+    justify-content: center;
+    flex-direction: column; */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .teams {
+    margin-top: 15px;
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    overflow: visible;
+}
+
+.team {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+}
+
+.redteam {
+    background: #9C2624;
+}
+
+.blueteam {
+    background: #13399E;
+}
+
+.banner {
+    padding: 15px;
+    box-shadow: 0 0 30px rgba(0,0,0,.15) inset,
+      				0 6px 10px rgba(0,0,0,.15);
+}
+
+.banner-trail {
+    position: relative;
+    top: 75px;
+    width: 115px;
+    height: 0px;
+    border-bottom: 75px solid transparent;
+}
+
+/* .banner-trail::before {
+    content: 'hi';
+    display: inline-block;
+    width: 200px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+.banner-trail::after {
+    content: 'hi';
+    display: inline-block;
+    width: 100px;
+    transform: rotate(22deg);
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+} */
+
+.banner-trail-red {
+    border-left: 200px solid #9C2624;
+    border-right: 200px solid #9C2624;
+}
+
+.banner-trail-blue {
+    border-left: 200px solid #13399E;
+    border-right: 200px solid #13399E;
+}
+
+.points {
+    /* font-family: 'Graduate', cursive; */
+    font-size: 5.2em;
+}
+
+.prompt {
+    height: 100%;
+    width: 100%;
+}
+
+.prompt input {
+    padding: 10px;
+}
+
+.stats {
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-content: center;
+}
+
+.stats h2 {
+    text-align: center;
+}
+
+.road-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: -1;
+    perspective: 20px;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.road {
+    background: #ce9e51;
+    width: 10%;
+    height: 100%;
+}
+
+.join {
+    display: flex;
+    justify-content: center;
+}
+
+.join button {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.join button:hover {
+    background: #ffffff;
+}
+
+#join-red:hover {
+    color: #9C2624;
+}
+
+#join-blue:hover {
+    color: #13399E;
+}
+
+/* .teams {
     display: flex;
     width: 100%;
     height: 100%;
@@ -32,14 +193,11 @@ RED VS BLUE
 }
 
 .redteam {
-    background: #cf012ee8;
+    background: #9C2624;
 }
 
 .blueteam {
-    background: rgb(11, 11, 151);
-    /* clip-path: polygon(0 90%, 100% 10%, 100% 100%, 0% 100%); */
-    /* display: flex;
-    flex-direction: column-reverse; */
+    background: #13399E;
 }
 
 .prompt {
@@ -54,7 +212,13 @@ RED VS BLUE
 
 .prompt input {
     padding: 10px;
-}
+} */
+
+/* background: #cf012ee8; */
+/* background: rgb(11, 11, 151); */
+    /* clip-path: polygon(0 90%, 100% 10%, 100% 100%, 0% 100%); */
+    /* display: flex;
+    flex-direction: column-reverse; */
 
 /*
 
