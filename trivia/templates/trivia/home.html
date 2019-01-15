@@ -2,7 +2,12 @@
 
 {% block content %}
     <div class="wrapper">
-        <div class="teams">
+        <div class="section sign">
+            <div class="sign-content">
+                <h3 class="sign-title">Players Wanted!</h3>
+            </div>
+        </div>
+        <div class="section teams">
             <div class="team redteam">
                 <div class="stats stats-blue">
                     <h2 class="banner redteam">Red Team</h2>
@@ -11,11 +16,8 @@
                 <div class="join">
                     <button id="join-red">Join</button>
                 </div>
-                <div class="banner-trail banner-trail-red"></div>
-            </div>                               
-            <!-- <div class="team">
-                vs
-            </div>              -->
+                <!-- <div class="banner-trail banner-trail-red"></div> -->
+            </div>                              
             <div class="team blueteam">
                 <div class="stats stats-blue">
                     <h2 class="banner blueteam">Blue Team</h2>
@@ -24,16 +26,9 @@
                 <div class="join">
                     <button id="join-blue">Join</button>
                 </div>
-                <div class="banner-trail banner-trail-blue"></div>
+                <!-- <div class="banner-trail banner-trail-blue"></div> -->
             </div>
-            <!-- <div class="prompt">
-                <h1 class="question">{{ question }}</h1>
-                <form id="rvb-form" action="" method="GET">
-                    {{ form.as_p }}
-                    <input type="submit">
-                </form>
-                {{ answer }}
-            </div> -->
+            
         </div>
         <div class="road-wrapper">
             <div class="road"></div>
@@ -41,3 +36,12 @@
     </div>
 
 {% endblock %}
+
+<!-- <div class="prompt">
+                <h1 class="question">{{ question }}</h1>
+                <form id="rvb-form" action="" method="GET">
+                    {{ form.as_p }}
+                    <input type="submit">
+                </form>
+                {{ answer }}
+            </div> -->

@@ -1,7 +1,7 @@
 * { 
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
 }
 
 body {
@@ -22,30 +22,61 @@ RED VS BLUE
 
 */
 
+
+
 #content {
     /* display: flex;
     justify-content: center;
     flex-direction: column; */
 }
 
-.wrapper {
+/* .wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+} */
+
+.section {
     display: flex;
     justify-content: center;
 }
 
+.sign-content {
+    margin-top: 25px;
+    width: 700px;
+    padding: 15px;
+    background: #aa7d35;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.sign-content:before{
+    content: "";
+    background: black;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 20px;
+    left: 100px;
+}
+
+.sign-title {
+    border-bottom: solid 1px black;
+    width: 85%;
+    text-align: center;
+}
+
 .teams {
     margin-top: 15px;
-    position: relative;
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    overflow: visible;
 }
 
 .team {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    align-items: center;
     width: 400px;
     height: 600px;
 }
@@ -64,13 +95,13 @@ RED VS BLUE
       				0 6px 10px rgba(0,0,0,.15);
 }
 
-.banner-trail {
+/* .banner-trail {
     position: relative;
     top: 75px;
-    width: 115px;
-    height: 0px;
-    border-bottom: 75px solid transparent;
-}
+    width: 50%;
+    height: 20%;
+    transform: rotate(45deg);
+} */
 
 /* .banner-trail::before {
     content: 'hi';
@@ -90,14 +121,27 @@ RED VS BLUE
             box-shadow: 0 10px 6px -6px #777;
 } */
 
+/* .team:after {
+    content: "";
+    position: absolute;
+    bottom: -2.4em;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: #e0bb74;
+    transform: rotate(45deg);
+} */
+
 .banner-trail-red {
-    border-left: 200px solid #9C2624;
-    border-right: 200px solid #9C2624;
+    /* border-left: 200px solid #9C2624;
+    border-right: 200px solid #9C2624; */
+    background: #9C2624;
 }
 
 .banner-trail-blue {
-    border-left: 200px solid #13399E;
-    border-right: 200px solid #13399E;
+    /* border-left: 200px solid #13399E;
+    border-right: 200px solid #13399E; */
+    background: #13399E;
 }
 
 .points {
@@ -138,7 +182,6 @@ RED VS BLUE
     z-index: -1;
     perspective: 20px;
     transform-style: preserve-3d;
-    overflow: hidden;
 }
 
 .road {
@@ -227,3 +270,48 @@ RED VS BLUE
 RED VS BLUE
 
 ========================================
+
+*/
+
+@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ 
+
+    /* .banner-trail-red {
+        border-left: 100px solid #9C2624;
+        border-right: 100px solid #9C2624;
+    }
+    
+    .banner-trail-blue {
+        border-left: 100px solid #13399E;
+        border-right: 100px solid #13399E;
+    } */
+
+}
+@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+
+
+}
+@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+
+
+}
+@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+
+
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+
+
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+
+    /* .banner-trail-red {
+        border-left: 200px solid #9C2624;
+        border-right: 200px solid #9C2624;
+    }
+    
+    .banner-trail-blue {
+        border-left: 200px solid #13399E;
+        border-right: 200px solid #13399E;
+    } */
+
+}
