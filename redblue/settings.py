@@ -100,6 +100,8 @@ DATABASES = {
         'NAME': 'redvsblue',
         'USER': 'rvb',
         'PASSWORD': get_secret('DB_PASSWORD'),
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
