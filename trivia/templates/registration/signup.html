@@ -1,0 +1,17 @@
+{% extends 'trivia/base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+    <div class="auth-wrapper">
+        <div class="form">
+            <h2>Sign up</h2>
+            <form method="POST" class="auth-form">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn" type="submit">Sign up</button>
+            </form>
+        </div>
+    </div>
+    
+{% endblock %}

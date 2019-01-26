@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block title %}{% endblock %}</title>
+    <title>{% block title %}Red vs Blue{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
     <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="{% static 'trivia/css/style.css' %}">
@@ -15,8 +15,14 @@
             <a href="/"><button class="btn">Home</button></a>
         </div>
         <div class="nav-auth">
-            <a href="{% url 'trivia:lobby' %}"><button class="btn">Login</button></a>
-            <button class="btn">Register</button>
+            {% if user.is_authenticated %}
+                Welcome, {{ user.username }}!
+                <a href="{% url 'logout' %}"><button class="btn">Logout</button></a>
+            {% else %}
+                Welcome, guest!
+                <a href="{% url 'login' %}"><button class="btn">Login</button></a>
+                <a href="{% url 'signup' %}"><button class="btn">Sign up</button></a>
+            {% endif %}
         </div>
     </nav>
     <div id="content">

@@ -414,3 +414,43 @@ RED VS BLUE
     } */
 
 }
+
+
+/* AUTHENTICATION */
+
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-form {
+    color: black;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.auth-form ul{
+    list-style: none;
+    display: none;
+}
+
+.auth-form p {
+    margin-bottom: 15px;
+}
+
+.auth-form p span {
+    display: none;
+}
+
+.auth-form button {
+    color: black;
+}
+
+.auth-form button:hover {
+    background: #ffffff;
+}
+
+input {
+    padding: 5px;
+    border-radius: 5px;
+}

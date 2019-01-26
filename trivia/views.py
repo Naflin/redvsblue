@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import requests
+from django.contrib.auth.forms import UserCreationForm
 from .forms import TriviaAnswerForm
 
 def home(request):
@@ -32,6 +33,18 @@ def home(request):
         'test': 'HEYYYY',
         'red': 0,
         'blue': 0,
+    })
+
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else: 
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {
+        'form': form
     })
 
 def lobby(request):

@@ -37,9 +37,10 @@ SECRET_KEY = get_secret('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '#######.ngrok.io',
     'localhost',
     '127.0.0.1',
+    '157.230.85.87',
+    'naflin.com'
 ]
 
 
@@ -91,10 +92,16 @@ WSGI_APPLICATION = 'redblue.wsgi.application'
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
 DATABASES = {
+    # PRODUCTION
     # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'naflin_prod',
+    #     'USER': 'u_naflin',
+    #     'PASSWORD': get_secret('DB_PASSWORD'),
+    #     'HOST': 'localhost',
+    #     'PORT': '',
     # }
+    # DEVELOPMENT
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'redvsblue',
@@ -143,3 +150,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# STATICFILES_DIR = '/home/nathan/redblue/static'
+# STATIC_ROOT = '/home/nathan/redblue/static'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
